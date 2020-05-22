@@ -1,0 +1,31 @@
+GET http://localhost:3000/subscribers
+
+###
+POST http://localhost:3000/subscribers
+Content-Type: application/json
+
+{
+    "name":"zandu",
+    "subscribedToChannel":"bazu"
+}
+
+###
+POST  http://localhost:3000/auth/registration
+Content-Type: application/json
+
+{
+    "name":"kjhhgfashgddgdff",
+    "mobileNumber": "mbhjddfgdsv",
+    "password": "1234567"
+}
+
+###
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmlzaGFiMjQiLCJpYXQiOjE1ODk5MDMxNzB9.t6sELc5lZKIuRd_S-FCFYSMcNzKPGYAzn3ovhmGcAuM
+
+{
+    "name":"kjhhgfashgddgdff",
+    "mobileNumber": "mbhjddfgsv",
+    "password": "1234567sgdfg"
+}
