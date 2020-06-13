@@ -2,6 +2,7 @@ require('dotenv').config()
 const subscribersRouter = require('./apis/subscriber/router')
 const usersRouter = require('./apis/users/router')
 const authRouter=require('./apis/auth/auth.router') 
+const cors = require('cors')
 
 const express = require('express')
 const app = express()
@@ -12,6 +13,7 @@ const db = mongoose.connection
 db.on('error', (error) => console.error(error))
 db.once('open', () => console.log('Connected to Database'))
 
+app.use(cors())
 app.use(express.json())
 
 

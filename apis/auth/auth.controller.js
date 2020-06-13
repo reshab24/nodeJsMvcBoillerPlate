@@ -15,12 +15,12 @@ const JWTHelper=require('../../helpers/jwt/jwt.helper');
             password:hashedPassword
             })
 
-            const newUser = await user.save()
-            res.status(201).json({message:" user LogedIn"})
+            user.save()
+            res.status(201).json({message:"User Registered Sucessfully "})
            
             }
             else{
-                res.status(400).json({message: "user AlreadyExit"})
+                res.status(400).json({message: "User Already Exit"})
             }
     }
     catch (err) {
