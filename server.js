@@ -2,7 +2,7 @@
 const subscribersRouter = require('./apis/subscriber/router')
 const usersRouter = require('./apis/users/router')
 const authRouter=require('./apis/auth/auth.router') 
-// const cors = require('cors')
+const cors = require('cors')
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
