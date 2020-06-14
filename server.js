@@ -19,7 +19,7 @@ const app = express()
 app.use('/subscribers', subscribersRouter)
 app.use('/users', usersRouter)
 app.use('/auth',authRouter)
-// app.get('/', function(req, res){
-//     res.send('Tks heroku');
-// })
+app.get('/', function(req, res){
+    res.send('Tks heroku');
+})
 app.listen(process.env.PORT || 5000, () => console.log('Server Started'))
