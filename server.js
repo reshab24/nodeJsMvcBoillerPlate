@@ -1,8 +1,8 @@
-require('dotenv').config()
-const subscribersRouter = require('./apis/subscriber/router')
-const usersRouter = require('./apis/users/router')
-const authRouter=require('./apis/auth/auth.router') 
-const cors = require('cors')
+// require('dotenv').config()
+// const subscribersRouter = require('./apis/subscriber/router')
+// const usersRouter = require('./apis/users/router')
+// const authRouter=require('./apis/auth/auth.router') 
+// const cors = require('cors')
 const express = require('express')
 const app = express()
 // const mongoose = require('mongoose')
@@ -22,6 +22,4 @@ const app = express()
 app.get('/', function(req, res){
     res.send('Tks heroku');
 })
-
-const port = process.env.PORT|| 3000
-app.listen(port, () => console.log('Server Started'))
+app.listen(process.env.PORT || 5000, () => console.log('Server Started'))
