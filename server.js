@@ -13,7 +13,7 @@ const app = express()
 // db.once('open', () => console.log('Connected to Database'))
 
 // app.use(cors())
-app.use(express.json())
+// app.use(express.json())
 
 
 app.use('/subscribers', subscribersRouter)
