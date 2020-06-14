@@ -23,5 +23,5 @@ app.get('/', function(req, res){
     res.send('Tks heroku');
 })
 
-const PORT = process.env.PORT|| 3000
-app.listen(PORT, () => console.log('Server Started'))
+const port = process.env.PORT|| 3000
+app.listen(port, () => console.log('Server Started'))
