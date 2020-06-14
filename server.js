@@ -1,4 +1,4 @@
-require('dotenv').config()
+// require('dotenv').config()
 const subscribersRouter = require('./apis/subscriber/router')
 const usersRouter = require('./apis/users/router')
 const authRouter=require('./apis/auth/auth.router') 
