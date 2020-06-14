@@ -19,7 +19,7 @@ const app = express()
 // app.use('/subscribers', subscribersRouter)
 // app.use('/users', usersRouter)
 // app.use('/auth',authRouter)
-app.get('/',(req, res)=> {
+app.get('/', function(req, res){
     res.send('Tks heroku');
 })
 
