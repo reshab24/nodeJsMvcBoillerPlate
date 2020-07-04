@@ -10,23 +10,36 @@ Content-Type: application/json
 }
 
 ###
-POST  http://localhost:3000/auth/registration
+POST  http://localhost:3000/users
 Content-Type: application/json
 
 {
-    "name":"sarthak",
-    "mobileNumber": "456456",
-    "password": "1234567",
+    "name":"sarthak124",
+    "mobileNumber": "456455465",
+    "password": "1234567h",
     "confirmPassword": "123"
 }
 
 ###
-POST http://localhost:3000/auth/login
+POST http://localhost:3000/users
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmlzaGFiMjQiLCJpYXQiOjE1ODk5MDMxNzB9.t6sELc5lZKIuRd_S-FCFYSMcNzKPGYAzn3ovhmGcAuM
 
 {
     "name":"kjhhgfashgddgdff",
-    "mobileNumber": "mbhjddfgsv",
+    "mobileNumber": "mbhjddfgsv5454",
     "password": "1234567sgdfg"
+}
+###
+GET  http://localhost:3000/users/5f002d8300842a0944ed9122
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmlzaGFiMjQiLCJpYXQiOjE1ODk5MDMxNzB9.t6sELc5lZKIuRd_S-FCFYSMcNzKPGYAzn3ovhmGcAuM
+
+###
+PATCH http://localhost:3000/users/5ec2ce336f666833d0caafec
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmlzaGFiMjQiLCJpYXQiOjE1ODk5MDMxNzB9.t6sELc5lZKIuRd_S-FCFYSMcNzKPGYAzn3ovhmGcAuM
+
+{
+    "name":"Emiway",
 }

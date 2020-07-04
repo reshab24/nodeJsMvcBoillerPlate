@@ -1,25 +1,26 @@
-// require('dotenv').config()
-const subscribersRouter = require('./apis/subscriber/router')
-const usersRouter = require('./apis/users/router')
-const authRouter=require('./apis/auth/auth.router') 
-const cors = require('cors')
-const express = require('express')
-const app = express()
+require('dotenv').config()
 const mongoose = require('mongoose')
+const app=require('./app');
 
-mongoose.connect(process.env.MONGODB_URL, { useNewUrlParser: true })
-const db = mongoose.connection
-db.on('error', (error) => console.error(error))
-db.once('open', () => console.log('Connected to Database'))
+const DB = process.env.DATABASE.replace(
+    '<PASSWORD>',
+    process.env.DATABASE_PASSWORD
+  );
+  
+  mongoose
+    .connect(DB, {
+      useNewUrlParser: true,
+      useCreateIndex: true,
+      useFindAndModify: false
+    })
+    .then((res) =>{ 
+        console.log(res.connections)
+        console.log('DB connection successful!')
+    });
 
-app.use(cors())
-app.use(express.json())
 
+const port =process.env.PORT || 4000;
 
-app.use('/subscribers', subscribersRouter)
-app.use('/users', usersRouter)
-app.use('/auth',authRouter)
-app.get('/', function(req, res){
-    res.send('Tks heroku');
-})
-app.listen(process.env.PORT || 5000, () => console.log('Server Started'))
+app.listen(port, () => {
+    console.log(`Server Started on port  ${port}`)
+});

@@ -4,16 +4,16 @@ mongoose.set('useCreateIndex', true);
 const usersSchema = new mongoose.Schema({
   name: {
      type: String,
-     required: true 
+     required: [true,"user name is requied"] 
   },
   mobileNumber: {
     type: String,
-    required: true,
+    required: [true , "mobile number is requied"],
     unique: true
   },
   password: {
     type: String,
-    required: true
+    required: true,
   },
   role: {
     type: String,
